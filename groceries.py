@@ -52,7 +52,7 @@ departments = list(departments)
 print("------------")
 print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
 
-department = sorted(departments)
+departments = sorted(departments)
 
 for department in departments:
     print(" + " + department)

@@ -24,14 +24,41 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # Products based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017 #<-- Copy and paste the provided products list here (see above!)
 
+#
+# PRODUCTS
+#
 
-print("------------")
-print("THERE ARE " + str(len(products)) + " PRODUCTS:")
+#print("------------")
+#print("THERE ARE " + str(len(products)) + " PRODUCTS:")
 
-products = sorted(products, key=operator.itemgetter('name'))
+#products = sorted(products, key=operator.itemgetter('name'))
+
+#for product in products:
+    #price_usd = ' (${0:.2f})'.format(product["price"])
+    #print(" + " + product["name"] + price_usd)
+
+#
+#DEPARTMENTS
+#
+
+departments = []
 
 for product in products:
-    price_usd = ' (${0:.2f})'.format(product["price"])
-    print(" + " + product["name"] + price_usd)
+    departments.append(product["department"])
+
+departments = set(departments)
+departments = list(departments)
+
+print("------------")
+print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
+
+department = sorted(departments)
+
+for department in departments:
+    print(" + " + department)
+
+
+
+
 
 # code.interact(local=locals())
